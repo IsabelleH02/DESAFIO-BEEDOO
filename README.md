@@ -1,31 +1,54 @@
 # DESAFIO-BEEDOO
 Desafio Analista de Qualidade de Software Júnior - Beedoo
 
-User Story: Módulo de Gestão de Cursos
+Historia de usuário : Módulo de Gestão de Cursos
 
-**Título:** Como administrador, quero gerenciar cursos para fornecer conteúdos educacionais organizados.
+Como administrador, 
+Quero gerenciar cursos 
+Para fornecer conteúdos educacionais organizados.
 
-#### Detalhes da História
+Detalhes da História
 
-**Como** um administrador, 
-**Eu quero** criar, excluir e listar cursos, 
-**Para que** eu possa manter o catálogo de cursos atualizado e organizado.
+Como um administrador, 
+Eu quero criar, excluir e listar cursos, 
+Para que eu possa manter o catálogo de cursos atualizado e organizado.
 
-#### Critérios de Aceitação
+Critérios de Aceitação
 
-1. **Criar Curso:**
- - **Dado que** estou na página de gestão de cursos,
- - **Quando** eu clicar no botão "Criar Novo Curso" e preencher as informações necessárias (nome do curso, descrição, instrutor, url da imagem de capa,
-data de inicio e fim, número de vagas, tipo de curso (online ou presencial) e link de inscrição ou endereço.),
- - **Então** um novo curso deve ser criado e adicionado ao catálogo.
+1.Criar Curso (caso de sucesso/happy path):
 
-2. **Excluir Curso:**
- - **Dado que** estou na página de gestão de cursos e vejo uma lista de cursos,
- - **Quando** eu clicar no ícone de lixeira ao lado de um curso e confirmar a exclusão,
- - **Então** o curso deve ser removido do catálogo.
+ - Dado que estou na página de gestão de cursos,
+ - Quando eu clicar no botão "Criar Novo Curso" e preencher as informações necessárias (nome do curso, descrição, instrutor, etc.),
+ - Então um novo curso deve ser criado e adicionado ao catálogo.
 
-3. **Listar Cursos:**
- - **Dado que** estou na página de gestão de cursos,
- - **Quando** eu acessar a página,
- - **Então** eu devo ver uma lista de todos os cursos disponíveis, incluindo informações básicas como nome do curso, descrição, instrutor, url da imagem de capa,
-data de inicio e fim, número de vagas, tipo de curso (online ou presencial) e link de inscrição ou endereço.
+1.1Criar Curso (caso de falha):
+
+- Dado que estou na página de gestão de cursos,
+ - Quando eu clicar no botão "Criar Novo Curso" e não preencher as informações necessárias (nome do curso, descrição, instrutor, etc.),
+-Então um novo curso não será criado e uma mensagem deverá aparecer para o usuário preencher os campos com as informações necessárias.
+
+
+2.Excluir Curso (caso de sucesso/happy path):
+
+ - Dado que estou na página de gestão de cursos e vejo uma lista de cursos,
+ - Quando eu clicar no ícone de lixeira ao lado de um curso e confirmar a exclusão,
+ - Então o curso deve ser removido do catálogo.
+
+2.1. Excluir Curso (caso de falha):
+
+ - Dado que estou na página de gestão de cursos e vejo uma lista de cursos,
+ - Quando eu clicar no ícone de lixeira ao lado de um curso e confirmar a exclusão,
+ - Então o curso não será removido do catálogo.
+
+3.Listar Cursos (caso de sucesso/happy path):
+
+ - Dado que estou na página de gestão de cursos,
+ - Quando eu acessar a página,
+ - Então eu devo ver uma lista de todos os cursos disponíveis, incluindo informações básicas como nome, descrição e instrutor.
+
+3.1. Listar Cursos (caso de falha):
+
+ - Dado que estou na página de gestão de cursos,
+ - Quando eu acessar a página,
+ - Então eu devo ver uma lista de todos os cursos disponíveis, incluindo informações básicas como nome, descrição e instrutor.
+
